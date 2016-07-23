@@ -10,7 +10,7 @@ source:
   sha256: 373c60cf2c5c9eaf598558167aedbc3ef9a0d9b652dfbd96b4725637cf03f628
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -31,6 +31,8 @@ requirements:
 test:
   commands:
     - dap-config --version
+    - conda inspect linkages -n _test libdap4  # [linux]
+
 
 about:
   home: http://www.opendap.org
