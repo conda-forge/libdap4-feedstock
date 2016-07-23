@@ -1,18 +1,26 @@
 #!/bin/bash
 
+if [ $(uname) == Darwin ]; then
+    export CC=clang
+    export CXX=clang++
+    export MACOSX_DEPLOYMENT_TARGET="10.9"
+    export CXXFLAGS="-stdlib=libc++ $CXXFLAGS"
+    export CXXFLAGS="$CXXFLAGS -stdlib=libc++"
+fi
+
+
 export LDFLAGS="-L$PREFIX/lib $LDFLAGS"
 export CPPFLAGS="-I$PREFIX/include $CPPFLAGS"
 
 autoreconf --force --install
 
 bash configure --prefix=$PREFIX \
-               --enable-threads=pth \
                --with-xml2=$PREFIX \
                --with-curl=$PREFIX \
-
+               --enable-threads=pth
 
 make
-# make check fails on os x for some reason.
+# Check fails on OS X for some reason.
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   make check
 fi
