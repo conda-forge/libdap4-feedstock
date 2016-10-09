@@ -31,7 +31,7 @@ requirements:
 test:
   commands:
     - dap-config --version
-    - conda inspect linkages -n _test libdap4  # [unix]
+    #- conda inspect linkages -p $PREFIX libdap4  # [not win]
 
 
 about:
