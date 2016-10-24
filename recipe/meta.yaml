@@ -10,7 +10,7 @@ source:
   sha256: 373c60cf2c5c9eaf598558167aedbc3ef9a0d9b652dfbd96b4725637cf03f628
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win]
 
 requirements:
@@ -20,11 +20,9 @@ requirements:
     - libtool
     - flex
     - bison
-    - libuuid
     - libxml2
     - curl
   run:
-    - libuuid
     - libxml2
     - curl
 
