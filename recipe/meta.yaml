@@ -30,12 +30,13 @@ test:
   commands:
     - dap-config --version
     #- conda inspect linkages -p $PREFIX libdap4  # [not win]
+    #- conda inspect objects -p $PREFIX nco  # [osx]
 
 
 about:
   home: http://www.opendap.org
   license: GNU LGPL
-  summary: A C++ SDK which contains an implementation of both DAP2 and DAP4
+  summary: 'A C++ SDK which contains an implementation of both DAP2 and DAP4.'
 
 extra:
   recipe-maintainers:
