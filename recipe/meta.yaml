@@ -22,9 +22,11 @@ requirements:
     - bison
     - libxml2
     - curl
+    - util-linux  # [linux]
   run:
     - libxml2
     - curl
+    - util-linux  # [linux]
 
 test:
   commands:
