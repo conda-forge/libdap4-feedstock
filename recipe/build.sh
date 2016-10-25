@@ -21,7 +21,7 @@ bash configure --prefix=$PREFIX \
 
 make
 # Check fails on OS X for some reason.
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  make check
-fi
+# if [ $(uname) == Linux ]; then
+#   make check
+# fi
 make install

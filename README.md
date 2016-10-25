@@ -7,7 +7,7 @@ Package license: GNU LGPL
 
 Feedstock license: BSD 3-Clause
 
-Summary: A C++ SDK which contains an implementation of both DAP2 and DAP4
+Summary: A C++ SDK which contains an implementation of both DAP2 and DAP4.
 
 
 

@@ -10,7 +10,7 @@ source:
   sha256: 373c60cf2c5c9eaf598558167aedbc3ef9a0d9b652dfbd96b4725637cf03f628
 
 build:
-  number: 3
+  number: 4
   skip: True  # [win]
 
 requirements:
@@ -22,20 +22,22 @@ requirements:
     - bison
     - libxml2
     - curl
+    - util-linux  # [linux]
   run:
     - libxml2
     - curl
+    - util-linux  # [linux]
 
 test:
   commands:
     - dap-config --version
     #- conda inspect linkages -p $PREFIX libdap4  # [not win]
-
+    #- conda inspect objects -p $PREFIX libdap4  # [osx]
 
 about:
   home: http://www.opendap.org
   license: GNU LGPL
-  summary: A C++ SDK which contains an implementation of both DAP2 and DAP4
+  summary: 'A C++ SDK which contains an implementation of both DAP2 and DAP4.'
 
 extra:
   recipe-maintainers:
