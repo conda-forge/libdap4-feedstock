@@ -10,7 +10,7 @@ source:
   sha256: b292513a7bd7a94b2b9900dd4bc156eab01e7ea3d603ef08ae5243d01eadf1c6
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -20,11 +20,11 @@ requirements:
     - libtool
     - flex
     - bison
-    - libxml2
+    - libxml2 2.9.*
     - curl
     - util-linux  # [linux]
   run:
-    - libxml2
+    - libxml2 2.9.*
     - curl
     - util-linux  # [linux]
 
