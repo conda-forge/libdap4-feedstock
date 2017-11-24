@@ -20,8 +20,5 @@ bash configure --prefix=$PREFIX \
                --enable-threads=pth
 
 make
-# Check fails on OS X for some reason.
-# if [ $(uname) == Linux ]; then
-#   make check
-# fi
+make check
 make install
