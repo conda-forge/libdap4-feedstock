@@ -9,7 +9,7 @@ source:
   sha256: 9798d7ed066c9560ecb22a7f1eb15a31bb1c506b37060648963d91f4d4e71fe6
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -20,18 +20,18 @@ requirements:
     - flex
     - bison
     - libxml2 2.9.*
-    - curl
+    - curl >=7.44.0,<8
     - util-linux  # [linux]
   run:
     - libxml2 2.9.*
-    - curl
+    - curl >=7.44.0,<8
     - util-linux  # [linux]
 
 test:
   commands:
     - dap-config --version
-    - conda inspect linkages -p $PREFIX libdap4  # [not win]
-    - conda inspect objects -p $PREFIX libdap4  # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://www.opendap.org
