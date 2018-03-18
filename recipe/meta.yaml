@@ -21,11 +21,11 @@ requirements:
     - bison
     - libxml2 2.9.*
     - curl >=7.44.0,<8
-    - util-linux  # [linux]
+    - libuuid  # [linux]
   run:
     - libxml2 2.9.*
     - curl >=7.44.0,<8
-    - util-linux  # [linux]
+    - libuuid  # [linux]
 
 test:
   commands:
