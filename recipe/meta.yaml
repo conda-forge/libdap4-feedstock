@@ -19,8 +19,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - automake
     - autoconf
+    - automake
     - libtool
     - flex
     - bison
@@ -28,12 +28,10 @@ requirements:
     - libxml2
     - libuuid  # [not osx]
     - curl
-    - flex
   run:
     - libxml2
     - libuuid  # [not osx]
     - curl
-    - flex
 
 test:
   commands:
