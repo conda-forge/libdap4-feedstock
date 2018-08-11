@@ -23,7 +23,7 @@ requirements:
     - automake
     - libtool
     - flex
-    - bison
+    - bison =3.0.4
   host:
     - libxml2
     - libuuid  # [not osx]
