@@ -1,12 +1,12 @@
-{% set version = "3.19.2" %}
+{% set version = "3.19.1" %}
 
 package:
   name: libdap4
   version: {{ version }}
 
 source:
-  url: https://github.com/OPENDAP/libdap4/archive/{{ version }}.tar.gz
-  sha256: 9798d7ed066c9560ecb22a7f1eb15a31bb1c506b37060648963d91f4d4e71fe6
+  url: https://github.com/OPENDAP/libdap4/archive/version-{{ version }}.tar.gz
+  sha256: 487c86ad95b45a83e9f0fc09b69107f6b035d7373c2a7a717532b6e31b1cb6ee
 
 build:
   number: 1
@@ -17,27 +17,28 @@ requirements:
     - automake
     - autoconf
     - libtool
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - flex
-    - bison
-    - libxml2 2.9.*
-    - curl >=7.44.0,<8
-    - util-linux  # [linux]
+    - bison 3.0.4
+    - libxml2
+    - curl
+    - libuuid  # [not osx]
   run:
-    - libxml2 2.9.*
-    - curl >=7.44.0,<8
-    - util-linux  # [linux]
+    - libxml2
+    - curl
+    - libuuid  # [not osx]
 
 test:
   commands:
     - dap-config --version
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://www.opendap.org
   license: GNU LGPL
   license_file: COPYING
-  summary: 'A C++ SDK which contains an implementation of both DAP2 and DAP4.'
+  summary: 'A C++ SDK which contains an implementation of both DAP2 and DAP4'
 
 extra:
   recipe-maintainers:
