@@ -9,7 +9,7 @@ source:
   sha256: 9798d7ed066c9560ecb22a7f1eb15a31bb1c506b37060648963d91f4d4e71fe6
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
 
 requirements:
@@ -21,11 +21,11 @@ requirements:
     - bison
     - libxml2 2.9.*
     - curl >=7.44.0,<8
-    - util-linux  # [linux]
+    - libuuid  # [linux]
   run:
     - libxml2 2.9.*
     - curl >=7.44.0,<8
-    - util-linux  # [linux]
+    - libuuid  # [linux]
 
 test:
   commands:
