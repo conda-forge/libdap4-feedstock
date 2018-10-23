@@ -1,4 +1,4 @@
-{% set version = "3.20.0" %}
+{% set version = "3.19.1" %}
 
 package:
   name: libdap4
@@ -6,25 +6,29 @@ package:
 
 source:
   url: https://github.com/OPENDAP/libdap4/archive/version-{{ version }}.tar.gz
-  sha256: 8f73ea257335729afb25e85a344b8a6f4e8cf62bccbb3282532f8e779bcd84e5
+  sha256: 487c86ad95b45a83e9f0fc09b69107f6b035d7373c2a7a717532b6e31b1cb6ee
 
 build:
   number: 1000
   skip: True  # [win]
+  run_exports:
+    # no ABI lab entry.  Going with minor pinning based on past conda-forge pinning.
+    - {{ pin_subpackage('libdap4', max_pin='x.x') }}
 
 requirements:
   build:
     - automake
     - autoconf
     - libtool
+    - flex
+    - bison 3.0.4
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - flex
-    - bison 3.0.4
     - libxml2
     - curl
     - libuuid  # [not osx]
+    - flex
   run:
     - libxml2
     - curl
@@ -45,3 +49,4 @@ extra:
     - aleksandervines
     - jakirkham
     - ocefpaf
+    - msarahan
