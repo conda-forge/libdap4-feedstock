@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/OPENDAP/libdap4/archive/version-{{ version }}.tar.gz
-  sha256: 455dc01ea344c7711cb8dd7ec983e72ff764073bab9ce93ef9b60aafc8c27b27
+  sha256: bd3b8e8f6dd83ef62edc3e10e2003408392f12e433bd56d81a2d333c07aecb17
 
 build:
   number: 1000
