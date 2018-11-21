@@ -1,4 +1,4 @@
-{% set version = "3.19.1" %}
+{% set version = "3.20.1" %}
 
 package:
   name: libdap4
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/OPENDAP/libdap4/archive/version-{{ version }}.tar.gz
-  sha256: 487c86ad95b45a83e9f0fc09b69107f6b035d7373c2a7a717532b6e31b1cb6ee
+  sha256: bd3b8e8f6dd83ef62edc3e10e2003408392f12e433bd56d81a2d333c07aecb17
 
 build:
   number: 1000
