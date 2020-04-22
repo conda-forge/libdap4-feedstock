@@ -1,4 +1,4 @@
-{% set version = "3.20.4" %}
+{% set version = "3.20.6" %}
 
 package:
   name: libdap4
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/OPENDAP/libdap4/archive/version-{{ version }}.tar.gz
-  sha256: c39fa310985cc8963029ad0d0aba784e7dbf1f70c566bd7ae58242f1bb06d24a
+  sha256: e44e83043c158d8c9d0a37a1821626ab0db4a1a6578b02182440170c0b060e6d
 
 build:
   number: 0
-  skip: True  # [win or (cxx_compiler == 'toolchain_cxx')]
+  skip: true  # [win or (cxx_compiler == 'toolchain_cxx')]
   run_exports:
     # no ABI lab entry.  Going with minor pinning based on past conda-forge pinning.
     - {{ pin_subpackage('libdap4', max_pin='x.x') }}
@@ -42,7 +42,7 @@ about:
   home: http://www.opendap.org
   license: GNU LGPL
   license_file: COPYING
-  summary: 'A C++ SDK which contains an implementation of both DAP2 and DAP4'
+  summary: A C++ SDK which contains an implementation of both DAP2 and DAP4
 
 extra:
   recipe-maintainers:
