@@ -11,7 +11,8 @@ autoreconf --force --install
 bash configure --prefix=${PREFIX} \
                --with-xml2=${PREFIX} \
                --with-curl=${PREFIX} \
-               --enable-threads=pth
+               --enable-threads=pth \
+               --disable-static
 
 make -j${CPU_COUNT} ${VERBOSE_AT}
 make check
