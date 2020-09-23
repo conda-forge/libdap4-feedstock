@@ -1,9 +1,15 @@
+BUILD:
+- aarch64-conda_cos7-linux-gnu
 c_compiler:
 - gcc
 c_compiler_version:
-- '7'
+- '7.5'
+cdt_arch:
+- aarch64
+cdt_name:
+- cos7
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 curl:
@@ -11,9 +17,9 @@ curl:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '7'
+- '7.5'
 docker_image:
-- condaforge/linux-anvil-comp7
+- condaforge/linux-anvil-aarch64
 libuuid:
 - 2.32.1
 libxml2:
@@ -25,3 +31,5 @@ pin_run_as_build:
     max_pin: x
   libxml2:
     max_pin: x.x
+target_platform:
+- linux-aarch64
