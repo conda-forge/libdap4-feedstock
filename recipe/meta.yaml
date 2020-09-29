@@ -22,6 +22,7 @@ requirements:
     - libtool
     - flex
     - bison
+    - make  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
