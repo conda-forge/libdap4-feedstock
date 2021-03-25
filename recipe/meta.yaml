@@ -48,7 +48,7 @@ test:
 
 about:
   home: http://www.opendap.org
-  license: GNU LGPL
+  license: GPL-2.0-or-later
   license_file: COPYING
   summary: A C++ SDK which contains an implementation of both DAP2 and DAP4
 
