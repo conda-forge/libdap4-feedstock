@@ -9,7 +9,7 @@ source:
   sha256: e44e83043c158d8c9d0a37a1821626ab0db4a1a6578b02182440170c0b060e6d
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   run_exports:
     # Seems to break ABI on some point releases
